@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản Lý Phiếu Mượn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Quản Lý Phiếu Mượn Sách</h1>
+
+    <div class="stats">
+        <div>Tổng phiếu: <span id="total">0</span></div>
+        <div>Đang mượn: <span id="borrowing">0</span></div>
+        <div>Đã trả: <span id="returned">0</span></div>
+    </div>
+
+    <button id="openModal"> Thêm Phiếu Mượn</button>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Mã PM</th>
+            <th>Họ tên</th>
+            <th>Mã sách</th>
+            <th>Thể loại</th>
+            <th>Ngày mượn</th>
+            <th>Hạn trả</th>
+            <th>SĐT</th>
+            <th>Email</th>
+            <th>Trạng thái</th>
+            <th>Ghi chú</th>
+            <th>Thao tác</th>
+        </tr>
+        </thead>
+
+        <tbody id="borrowList">
+            
+        </tbody>
+    </table>
+
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <h2 id="modalTitle">Thêm Phiếu Mượn</h2>
+
+        <form id="borrowForm">
+
+            <input type="text" id="borrowId" placeholder="Mã phiếu mượn">
+            <small class="error" id="borrowIdError"></small>
+
+            <input type="text" id="name" placeholder="Họ tên">
+            <small class="error" id="nameError"></small>
+
+            <input type="text" id="bookId" placeholder="Mã sách">
+            <small class="error" id="bookIdError"></small>
+
+            <select id="category">
+                <option value="">Chọn thể loại</option>
+                <option>CNTT</option>
+                <option>Kinh tế</option>
+                <option>Ngoại ngữ</option>
+                <option>Kỹ năng</option>
+            </select>
+            <small class="error" id="categoryError"></small>
+
+            <input type="date" id="borrowDate">
+            <small class="error" id="borrowDateError"></small>
+
+            <input type="date" id="dueDate">
+            <small class="error" id="dueDateError"></small>
+
+            <input type="text" id="phone" placeholder="Số điện thoại">
+            <small class="error" id="phoneError"></small>
+
+            <input type="email" id="email" placeholder="Email">
+            <small class="error" id="emailError"></small>
+
+            <select id="status">
+                <option value="">Trạng thái</option>
+                <option>Đang mượn</option>
+                <option>Đã trả</option>
+            </select>
+            <small class="error" id="statusError"></small>
+
+            <textarea id="note" placeholder="Ghi chú"></textarea>
+            <small class="error" id="noteError"></small>
+
+            <div class="buttons">
+                <button type="submit">Lưu</button>
+                <button type="button" id="closeModal">Đóng</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="data.js"></script>
+</body>
+</html>
