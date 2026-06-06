@@ -332,7 +332,7 @@ function clearErrors(){
     .forEach(e=>e.innerText="");
 }
 
-// THÊM / SỬA
+// THÊM / 
 
 form.onsubmit = function(e){
 
