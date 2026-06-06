@@ -342,16 +342,16 @@ form.onsubmit = function(e){
 
     const borrow = {
 
-        borrowId:borrowId.value,
-        name:name.value,
-        bookId:bookId.value,
-        category:category.value,
-        borrowDate:borrowDate.value,
-        dueDate:dueDate.value,
-        phone:phone.value,
-        email:email.value,
-        status:status.value,
-        note:note.value
+    borrowId: document.getElementById("borrowId").value,
+    name: document.getElementById("name").value,
+    bookId: document.getElementById("bookId").value,
+    category: document.getElementById("category").value,
+    borrowDate: document.getElementById("borrowDate").value,
+    dueDate: document.getElementById("dueDate").value,
+    phone: document.getElementById("phone").value,
+    email: document.getElementById("email").value,
+    status: document.getElementById("status").value,
+    note: document.getElementById("note").value
     };
 
     if(editIndex===-1){
